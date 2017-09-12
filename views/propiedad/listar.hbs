@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    {{#each propiedades}}
+  <tr>
+        <td>{{nombre}}</td>
+     <td>{{nbanos}}</td>
+     <td>{{ncuartos}}</td>
+     <td>{{ngarajes}}</td>
+     <td>{{tipoDePropiedad}}</td>
+     <td>{{tipoDeInmueble}}</td>
+     <td>{{precio}}</td>
+     <td><a href="/propiedad/actualizar/{{id}}">Actualizar</a></td>
+     <td><a href="/propiedad/eliminar/{{id}}">Eliminar</a></td>
+  </tr>{{/each}}
+</table>

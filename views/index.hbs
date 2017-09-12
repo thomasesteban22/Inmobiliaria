@@ -1,0 +1,174 @@
+<div>
+    <!--INICIO DE IMAGEN DE FONDO Y FORMULARIO DE BUSCAR PROPIEDADES -->
+    <div class="contenedor-imagen">
+        <img src="images/fondo.jpg" alt="fondo" width="100%" height="600px;">
+        <div class="contenedor-formulario">
+            <h2>Busca tu propiedad</h2>
+            <form class="formulario-buscar" method="post" action="/">
+                <select name="tipoDeInmueble" class="form-control">
+                        <option value="">Tipo de Inmueble</option>
+                        {{#each tipoDeInmuebles}}
+                        <option value="{{valor}}">{{valor}}</option>
+                        {{/each}}
+                    </select>
+                <select name="ngarajes" class="form-control">
+                        <option value="" >Garajes</option>
+                        {{#each garajes}}
+                        <option value="{{cantidad}}">{{cantidad}}</option>
+                        {{/each}}
+                    </select>
+                <select name="tipoDePropiedad" class="form-control">
+                    <option value="" >Tipo de propiedad</option>
+                    {{#each tipoDePropiedades}}
+                    <option value={{valor}}>{{valor}}</option>
+                    {{/each}}
+                </select>
+                <select name="ncuartos" class="form-control">
+                        <option value="" >Seleccione cuartos</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                <select name="nbanos" class="form-control">
+                        <option value="" >Seleccionar baños</option>
+                        {{#each banos}}
+                        <option value="{{cantidad2}}">{{cantidad2}}</option>
+                        {{/each}}
+                    </select>
+                <button type="submit" class="btn btn-default">Buscar</button>
+            </form>
+        </div>
+    </div>
+    <!--FIN DE IMAGEN DE FONDO Y FORMULARIO DE BUSCAR PROPIEDADES -->
+
+    <!--INICIO DE ULTIMAS PROPIEDADES -->
+   {{!--  <h1 class="subtitulo">Ultimas Propiedades</h1>
+    <div class="contenedor-ultimas-propiedades">
+        {{#each propiedades}}
+        <div id="{{@index}}" class="mi-slider carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                {{#each imagenes}}
+                <div class="item {{clase}}">
+                    <img src="{{path}}" alt="..." height="100%" width="100%" class="imagen-propiedad">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                {{/each}}
+                <h5 class="descripcion">
+                    <a href="/propiedad/{{id}}">{{this.nombre}} - {{barrio}} </a>
+                </h5>
+                <div class="container-informacion-propiedad">
+                    <span><i class="glyphicon glyphicon-bed"></i>{{ncuartos}}</span>
+                    <span><i class="glyphicon glyphicon-tint"></i>{{nbanos}}</span>
+                    <span><i class="glyphicon glyphicon-th-large"></i>{{metrosCuadrados}}MTS<sup>2</sup></span>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#{{@index}}" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+                <a class="right carousel-control" href="#{{@index}}" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+            </div>
+        </div>
+        {{/each}}
+    </div> --}}
+
+    <!--FIN DE ULTIMAS PROPIEDADES -->
+
+
+
+
+
+
+    <!--MAS ECONOMICAS-->
+    <h1 class="subtitulo">Propiedades mas economicas</h1>
+    <div class="contenedor-ultimas-propiedades">
+        {{#each propiedadesEconomicas}}
+        <div id="{{@index}}economicas" class="mi-slider carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                {{#each imagenes}}
+                <div class="item {{clase}}">
+                   
+                <img src="{{path}}" alt="..." height="100%" width="100%" class="imagen-propiedad">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                {{/each}}
+                <h5 class="descripcion">
+                    <a href="/propiedad/{{id}}">{{this.nombre}} - {{barrio}} </a>
+                </h5>
+                <div class="container-informacion-propiedad">
+                    <span><i class="glyphicon glyphicon-bed"></i>{{ncuartos}}</span>
+                    <span><i class="glyphicon glyphicon-tint"></i>{{nbanos}}</span>
+                    <span><i class="glyphicon glyphicon-th-large"></i>{{metrosCuadrados}}MTS<sup>2</sup></span>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#{{@index}}economicas" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+                <a class="right carousel-control" href="#{{@index}}economicas" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+
+
+
+
+    <!--FIN DE MAS ECONOMICAS-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

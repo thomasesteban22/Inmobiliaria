@@ -1,0 +1,28 @@
+<h1>Index de agentes</h1>
+<table class="table">
+     <tr>
+         <th></th>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>Direccion</th>
+         <th>Telefono</th>
+         <th>Email</th>
+         <th>Calificacion</th>
+         <th>Estado</th>
+      
+    </tr>
+    {{#each agentes}}
+    <tr>
+        <th><img width="40px" height="40px" src="{{foto.path}}" alt="foto"></th>
+        <th>{{nombre}}</th>
+        <th>{{apellido}}</th>
+        <th>{{direccion}}</th>
+        <th>{{telefono}}</th>
+        <th>{{correoElectronico}}</th>
+        <th>{{mostrarEstrellas calificacion}}</th>
+        <th>{{mostrarEstado estado}}</th>
+
+    </tr>
+    {{/each}}
+</table>
+<a href="/agente/crear">IR A CREAR</a>

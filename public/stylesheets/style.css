@@ -1,0 +1,317 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  border:0;
+  color: black!important;
+}
+* {
+  box-sizing: border-box;  
+}
+select{
+  border-radius: inherit !important;
+}
+
+p{
+  padding: none;
+  margin: none;
+  border: none;
+}
+a:link{
+  text-decoration: none;
+  color:#00B7FF
+}
+a:active{
+  text-decoration: none;
+  color:#00B7FF
+}
+a:visited{
+  text-decoration: none;
+  color:#00B7FF
+}
+a:hover{
+  text-decoration: none;
+  color:orangered;
+}
+
+li{
+  margin-right: 50px;
+  text-align: center;
+  display:inline-block;
+}
+.img1{
+ position: absolute;
+  margin-right: 40px;
+  height: 400px;
+  width: 100%;
+  margin-left: 4px;
+  z-index: -1;
+}
+
+.nav2{
+  margin-left: 180px;
+  margin-right: 70px;
+  margin-bottom: 200px;
+ background-color: white;
+}
+.titulo1{
+  text-align: center;
+  color: white;
+  padding-top: 150px;
+  font-size: 35px;
+  font-family: Arial;
+  font-weight: bold;
+}
+.btn{
+  border-radius: inherit;
+  background-color: orangered;
+  border: 2px solid orangered;
+}
+.nav-tabs{
+border-bottom: none;
+}
+
+
+.dropdownstyle{
+  border-right:solid grey 2px;
+  margin-right:10px;
+}
+
+.navBuscar{
+  background-color: orangered;
+}
+.subtitulo{
+  background-color: white;
+  text-align: center;
+  font-family: Arial;
+  color: orangered;
+}
+.galeria{
+  background-color: white;
+  
+}
+.descripcion{
+  font-family: Arial;
+  text-align: center;
+}
+.galeria2{
+  background-color: darkgrey;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.Subtitulo2{
+  background-color: darkgrey;
+  font-family: Arial;
+  color: orangered;
+  margin-left: 4px;
+  margin-right: 4px;
+
+}
+.Descripcion2{
+  color:white;
+  font-family: arial;
+}
+.icono{
+  width: 100%;
+  color:orangered;
+}
+.icono2{
+  padding-top: 100px;
+  background-color: white;
+  width: 100%;
+}
+.Subtitulo3{
+  text-align: center;
+  font-size: 15px;
+  color:darkgrey;
+  background-color: white;
+  width: 100%
+}
+.trabajamosCon{
+  text-align: center;
+  background-color: white;
+  width: 100%;
+}
+.TrabajamosCon2{
+  float: none;
+  display: inline-block;
+  text-align: left;
+}
+.footer{
+  background-color: orangered;
+  color:white;
+  font-family: arial;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+
+}
+.map{
+  height: 250px;
+  padding-left: 150px;
+}
+
+.inpropiedad{
+  background-color: white;
+  color: black;  
+  font-family: Arial;
+}
+.textodescrp{
+  background-color: white;
+  color: darkgrey;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.ul-list{
+  color: darkgrey;
+  font-size: 15px;
+
+}
+
+.imgsmall{
+  height: 70px;
+
+}
+
+.txtdescriptivo{
+  font-family: Arial;
+  font-size: 16px;
+  color: black;
+  float: left;
+}
+.texto{
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 14px;
+  color: darkgrey;
+}
+.infoPropiedad{
+padding-left: 70px;
+padding-bottom: 20px;
+background-color: white;
+}
+.infoIcons{
+  font-family:Helvetica, sans-serif;
+  font-size: 25px;
+  border: solid 1px ;
+  color: orangered;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align:center;
+  background-color: white;
+}
+.tituloPropiedad{
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.imagenGrande{
+  height: 417px;
+}
+.imagenPequeña{
+}
+.imagenesPropiedad{
+  background-color: white;
+  padding-bottom: 30px;
+}
+.container11{
+  display: flex;
+  background: aquamarine;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 50px;
+}
+.container9{
+  display: flex;
+  background: greenyellow;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.adaptar{
+  height: 800px;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.slider{
+  height: 900px;
+  width: 100%;
+  padding-left: 70px;
+  padding-top: 400px;
+}
+.mi-slider{
+  width: 350px;
+  height: 300px;
+}
+.nav1{
+  display: flex;
+  background-color:orangered;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
+  flex-wrap: nowrap;
+}
+.nav-item{
+  display: flex;
+  width: 500px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-item:hover{
+  background-color: white;
+  cursor: pointer;
+}
+.nav-item:hover > a{
+  color: orangered;
+  
+}
+.nav-item > a{
+color: white;
+}
+.contenedor-imagen{
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.contenedor-formulario{
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  z-index: 2;
+}   
+.formulario-buscar{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+.contenedor-ultimas-propiedades{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contenedor-formulario-crear-propiedad{
+  background-color: grey;
+}
+.container-informacion-propiedad{
+  display: flex;
+  justify-content: space-around;
+
+}
+.imagen-propiedad{
+  box-shadow: 10px 10px 5px orangered;
+  
+}

@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="/stylesheets/formularioDeContacto.css">
+
+<div class="">
+    <div class="col-sm-12 tituloPropiedad">
+        <h3>{{propiedad.nombre}} - {{propiedad.barrio}} - ${{propiedad.precio}}</h3>
+    </div>
+    <div class="col-sm-12 infoPropiedad">
+        <span class="infoIcons" role="presentation"><i class="fa fa-map-marker" aria-hidden="true"></i>{{propiedad.direccion}}</span>
+        <span class="infoIcons" role="presentation"><i class="fa fa-arrows" aria-hidden="true"></i>{{propiedad.metrosCuadrados}}mt<sup>2</sup></i></span>
+        <span class="infoIcons" role="presentation"><i class="fa fa-bed" aria-hidden="true"></i>{{propiedad.ncuartos}}</span>
+        <span class="infoIcons" role="presentation"><i class="fa fa-shower" aria-hidden="true"></i>{{propiedad.nbanos}}</span>
+        <span class="infoIcons" role="presentation"><i class="fa fa-car" aria-hidden="true"></i>{{propiedad.ngarajes}}</span>
+    </div>
+
+    <div class="col-sm-12 imagenesPropiedad">
+        <img class="col-sm-7 imagenGrande" src="/images/IMG2.jpg">
+        <img class="col-sm-4 imagenPequeña" src="/images/IMG2.jpg">
+        <img class="col-sm-4 imagenPequeña" src="/images/IMG2.jpg">
+    </div>
+
+</div>
+
+
+<h1>Informacion adicional</h1>
+<div class="inpropiedad">
+    <div class="col-sm-4">
+        {{propiedad.descripcion}}
+        <h3>Tipo de inmueble</h3>
+        <p>{{propiedad.tipoDeInmueble}}</p>
+    </div>
+    <!--<div class="col-sm-6">
+      {{> mapa}}
+    </div>-->
+</div>
+<div class="col-sm-4">
+    <div id="panel">
+        <h2>Contactar Asesor</h2>
+        <form>
+            <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+
+            <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+
+            <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Mobile No</label>
+            </div>
+
+            <div class="group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Message</label>
+            </div>
+            <div class="group">
+                <center> <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button></center>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+<div class="col-sm-12 galeria2">
+    <h1 class="Subtitulo2">Propiedades similares Agregadas</h1>
+
+    <div class="col-sm-3">
+        <img src="/images/IMG2.jpg" class="img-thumbnail">
+        <h4 class="Descripcion2">Suba</h4>
+        <h5 class="Descripcion2"><span class="glyphicon glyphicon-bed"></span>3<span class="glyphicon glyphicon-tint"></span>2<span class="glyphicon glyphicon-th-large"></span>180,5
+            mts/2
+        </h5>
+    </div>
+    <div class="col-sm-3">
+        <img src="/images/IMG2.jpg" class="img-thumbnail">
+        <h4 class="Descripcion2">Suba</h4>
+        <h5 class="Descripcion2"><span class="glyphicon glyphicon-bed"></span>3<span class="glyphicon glyphicon-tint"></span>2<span class="glyphicon glyphicon-th-large"></span>180,5
+            mts/2
+        </h5>
+    </div>
+    <div class="col-sm-3">
+        <img src="/images/IMG2.jpg" alt="..." class="img-thumbnail">
+        <h4 class="Descripcion2">Suba</h4>
+        <h5 class="Descripcion2"><span class="glyphicon glyphicon-bed"></span>3<span class="glyphicon glyphicon-tint"></span>2<span class="glyphicon glyphicon-th-large"></span>180,5
+            mts/2
+        </h5>
+    </div>
+
+</div>

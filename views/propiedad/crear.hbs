@@ -1,0 +1,178 @@
+<div class="contenedor-formulario-crear-propiedad">
+<form  method="post" action="/propiedad" class="form-horizontal"enctype="multipart/form-data" >
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Nombre</label>
+    <div class="col-sm-10">
+        <select name="nombre" class="form-control">
+            <option value="Casa en venta" >Casa en venta</option>
+             <option value="Apartamento en venta" >Apartamento en venta</option>
+              <option value="Local en venta" >Local en venta</option>
+               <option value="Casa en arriendo" >Casa en arriendo</option>
+                <option value="Apartamento en arriendo" >Apartamento en arriendo</option>
+                 <option value="Local en arriendo" >Local en arriendo</option>
+        </select>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Numero De Baños</label>
+    <div class="col-sm-10">
+     <select name="nbanos" class="form-control">
+         <option value="0">0</option>
+         <option value="1">1</option>
+        <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>    
+     </select>
+      <span class="text-danger">{{errors.nbanos}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Numero De Cuartos</label>
+    <div class="col-sm-10">
+      <select name="ncuartos" class="form-control">
+         <option value="0">0</option>
+         <option value="1">1</option>
+        <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>    
+     </select>
+      <span class="text-danger">{{errors.ncuartos}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Numero De Garages</label>
+    <div class="col-sm-10">
+       <select name="ngarajes" class="form-control">
+         <option value="0">0</option>
+         <option value="1">1</option>
+        <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>    
+     </select>
+      <span class="text-danger">{{errors.ngarajes}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Metros Cuadrados</label>
+    <div class="col-sm-10">
+      <input name="metrosCuadrados" class="form-control"  value="{{propiedad.metrosCuadrados}}">
+       <span class="text-danger">{{errors.metrosCuadrados}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Tipo De Propiedad</label>
+    <div class="col-sm-10">
+       <select name="tipoDePropiedad" class="form-control">
+            <option value="Casa" >Casa</option>
+             <option value="Apartamento" >Apartamento</option>
+              <option value="Local" >Local</option>
+        </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Tipo De Inmueble</label>
+    <div class="col-sm-10">
+      <select name="tipoDeInmueble" class="form-control">
+            <option value="Nuevo" >Nuevo</option>
+             <option value="Usado" >Usado</option>
+        </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Precio</label>
+    <div class="col-sm-10">
+      <input name="precio" class="form-control"value="{{propiedad.precio}}"  >
+      <span class="text-danger">{{errors.precio}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Barrio</label>
+    <div class="col-sm-10">
+      <input name="barrio" class="form-control" value="{{propiedad.barrio}}" >
+       <span class="text-danger">{{errors.barrio}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Direccion</label>
+    <div class="col-sm-10">
+      <input name="direccion" class="form-control" value="{{propiedad.direccion}}" >
+       <span class="text-danger">{{errors.direccion}}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Descripcion</label>
+    <div class="col-sm-10">
+      <input name="descripcion" class="form-control"  value="{{propiedad.descripcion}}">
+       <span class="text-danger">{{errors.descripcion}}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Fotos</label>
+    <div class="col-sm-10">
+      <input name="imagenes" class="form-control" type="file" multiple  >
+       <span class="text-danger">{{errors.imagenes}}</span>
+    </div>
+  </div>
+   <div class="form-group">
+    <label  class="col-sm-2 control-label">Paises</label>
+    <div  id="paises" class="col-sm-10">
+      <select class="form-control" name="pais" id="pais">
+        {{#each paises}}
+        <option value="{{valor}}">{{valor}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Departamentos</label>
+    <div  id="departamentos" class="col-sm-10">
+      <select class="form-control" name="departamento" id="departamento">
+        {{#each departamentos}}
+        <option value="{{valor}}">{{valor}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label  class="col-sm-2 control-label">Ciudades</label>
+    <div  id="ciudades" class="col-sm-10">
+      <select class="form-control" name="ciudad" id="ciudad">
+        {{#each ciudades}}
+        <option value="{{valor}}">{{valor}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">GuardarPropiedad</button>
+    </div>
+  </div>
+</form>
+</div>
+
