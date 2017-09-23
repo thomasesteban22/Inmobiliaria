@@ -25,7 +25,7 @@ router.get('/', function (req, res) {
             for (var i = 0; i < propiedades.length; i++)
             { 
               propiedades[i].imagenes[0].clase = "active";
-                 console.log(propiedades[i].imagenes[0])
+                
             }
             Propiedad.find({}).
             sort({ precio: 1 }).
@@ -35,7 +35,7 @@ router.get('/', function (req, res) {
                     console.log(err);
                     res.send("error consultando las propiedades mas economicas");
                 }
-                console.log(propiedadesEconomicas)
+             
                 res.render('index', {
                   propiedades: propiedades,
                   garajes: garajes,
@@ -77,7 +77,7 @@ router.post("/", function (req, res) {
   if (nbanos) {
     consulta.nbanos = parseInt(nbanos);
   };
-  console.log(consulta);
+
   Propiedad.find(consulta
     , function (err, propiedades) {
 

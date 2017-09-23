@@ -43,12 +43,12 @@
     <!--FIN DE IMAGEN DE FONDO Y FORMULARIO DE BUSCAR PROPIEDADES -->
 
     <!--INICIO DE ULTIMAS PROPIEDADES -->
-   {{!--  <h1 class="subtitulo">Ultimas Propiedades</h1>
+    <h1 class="subtitulo">Ultimas Propiedades</h1>
     <div class="contenedor-ultimas-propiedades">
         {{#each propiedades}}
-        <div id="{{@index}}" class="mi-slider carousel slide" data-ride="carousel">
+        <div id="{{@index}}" class="mi-slider fondo-de-informacion-gris carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner " role="listbox">
                 {{#each imagenes}}
                 <div class="item {{clase}}">
                     <img src="{{path}}" alt="..." height="100%" width="100%" class="imagen-propiedad">
@@ -76,26 +76,25 @@
             </div>
         </div>
         {{/each}}
-    </div> --}}
+    </div>
 
     <!--FIN DE ULTIMAS PROPIEDADES -->
-
-
-
-
-
-
+    <!--IMAGEN PUBLICITARIA-->
+    <div>
+        <img src="images/imagenPublicitaria.png" alt="imagen publicitaria">
+    </div>
+    <!--END IMAGEN PUBLICITARIA-->
     <!--MAS ECONOMICAS-->
     <h1 class="subtitulo">Propiedades mas economicas</h1>
-    <div class="contenedor-ultimas-propiedades">
+    <div class="contenedor-ultimas-propiedades  color-de-fondo-mas-economicas">
         {{#each propiedadesEconomicas}}
-        <div id="{{@index}}economicas" class="mi-slider carousel slide" data-ride="carousel">
+        <div id="{{@index}}economicas" class="mi-slider fondo-de-informacion-blanco carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 {{#each imagenes}}
                 <div class="item {{clase}}">
-                   
-                <img src="{{path}}" alt="..." height="100%" width="100%" class="imagen-propiedad">
+
+                    <img src="{{path}}" alt="..." height="100%" width="100%" class="imagen-propiedad">
                     <div class="carousel-caption">
                     </div>
                 </div>
@@ -129,8 +128,29 @@
 
     <!--FIN DE MAS ECONOMICAS-->
 
+    <!--PROPIEDADES DE RELLENO-->
+
+    <h1 class="subtitulo">Propiedades mas economicas</h1>
+    <div class="contenedor-ultimas-propiedades  fondo-de-informacion-blanco">
+        {{#each propiedadesEconomicas}}
+
+        
+            <div class='single-item'>
+                {{#each imagenes}}
+                <div><img src="{{path}}" alt="imagen">
+                    <h5 class="descripcion">
+                        <a href="/propiedad/{{id}}">{{this.nombre}} - {{barrio}} </a>
+                    </h5>
+                </div>
+                {{/each}}
+        
+        </div>
 
 
+
+        {{/each}}
+    </div>
+    <!--END PROPIEDADES DE RELLENO-->
 
 
 

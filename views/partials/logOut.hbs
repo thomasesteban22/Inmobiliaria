@@ -1,0 +1,7 @@
+<div class="contenedor-log-out">
+    {{#if user}}
+    <img src="{{user.imagen}}" alt="fotodeperfil">
+<a href="/auth/logOut">{{user.email}}<i  class="icono-log-out fa fa-sign-out" aria-hidden="true"></i></a>
+    {{else}} 
+    {{/if}}
+</div>

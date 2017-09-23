@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/stylesheets/formularioDeContacto.css">
-
 <div class="">
     <div class="col-sm-12 tituloPropiedad">
         <h3>{{propiedad.nombre}} - {{propiedad.barrio}} - ${{propiedad.precio}}</h3>
@@ -13,62 +11,49 @@
     </div>
 
     <div class="col-sm-12 imagenesPropiedad">
-        <img class="col-sm-7 imagenGrande" src="/images/IMG2.jpg">
-        <img class="col-sm-4 imagenPequeña" src="/images/IMG2.jpg">
-        <img class="col-sm-4 imagenPequeña" src="/images/IMG2.jpg">
+        <img class="col-sm-7 imagenGrande" src="{{imagenes.imagen1}}">
+        <img class="col-sm-4" src="{{imagenes.imagen2}}">
+        <img class="col-sm-4" src="{{imagenes.imagen3}}">
     </div>
 
 </div>
 
 
-<h1>Informacion adicional</h1>
-<div class="inpropiedad">
-    <div class="col-sm-4">
+<h1 class="subtitulo">Informacion adicional</h1>
+<div class="row">
+    <div class="descripcion-propiedad col-sm-7">
+        <h3>Descripcion</h3>
         {{propiedad.descripcion}}
         <h3>Tipo de inmueble</h3>
         <p>{{propiedad.tipoDeInmueble}}</p>
+        <h3>Ciudad</h3>
+        <p>{{propiedad.ciudad}}</p>
     </div>
-    <!--<div class="col-sm-6">
-      {{> mapa}}
-    </div>-->
+    <div class="col-sm-5">
+        {{> mapa}}
+    </div>
 </div>
-<div class="col-sm-4">
-    <div id="panel">
-        <h2>Contactar Asesor</h2>
-        <form>
-            <div class="group">
-                <input type="text" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Name</label>
-            </div>
 
-            <div class="group">
-                <input type="text" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Email</label>
-            </div>
-
-            <div class="group">
-                <input type="text" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Mobile No</label>
-            </div>
-
-            <div class="group">
-                <input type="text" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Message</label>
-            </div>
-            <div class="group">
-                <center> <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button></center>
-            </div>
+<div class="fondo-contactar-agente row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <form class="contactar-agente" method="post" action="/agente/contactar">
+            <label for="nombre">Nombre</label><input required type="text" name="nombre" id="nombre">
+            <label for="telefono">Telefono</label><input required type="number" name="telefono" id="telefono">
+            <label for="email">Email</label><input required type="email" name="email" id="email">
+            <label for="mensaje">Mensaje</label><input required type="text" name="mensaje" id="mensaje">
+            <label for="agente">Asesor</label><select type="text" name="agente" id="agente">
+                <option value="">Asesor</option>
+                {{#each agentes}}
+                <option value="{{id}}">{{nombre}} {{apellido}}</option>
+                {{/each}}
+            </select>
+            <input type="hidden" value="{{propiedad.id}}" name="propiedad">
+            <br/>
+            <button type="submit">Enviar</button>
         </form>
-
     </div>
+    <div class="col-sm-2"></div>
 </div>
 
 

@@ -22,5 +22,4 @@ router.post("/crear", function (req, res) {
 });
 
 
-
 module.exports = router;

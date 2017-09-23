@@ -6,6 +6,7 @@ var APPROOT = require('../settings');
 var Ciudad = require("../models/ciudad")
 var Pais = require("../models/pais")
 var Departamento = require("../models/departamento")
+var Agente = require("../models/agente")
 
 router.get("/economicas", function(req, res){
     Propiedad.find({}).
@@ -35,7 +36,14 @@ router.get('/:id', function (req, res) {
         if (err) {
             res.send("Error al treaer propiedades");
         }
-        res.render('propiedad', { title: 'Propiedad', propiedad: propiedad });
+        var imagenes = {
+            imagen1 : propiedad.imagenes[0].path,
+            imagen2 : propiedad.imagenes[1].path,
+            imagen3 :propiedad.imagenes[2]? propiedad.imagenes[2].path : ""
+        }
+        Agente.find(function(err, agentes){
+            res.render('propiedad', { title: 'Propiedad', propiedad: propiedad, imagenes : imagenes, agentes : agentes });
+        });
     });
 });
 router.post("/", function (req, res) {
@@ -57,6 +65,7 @@ router.post("/", function (req, res) {
         propiedad.pais = fields.pais
         propiedad.ciudad = fields.ciudad
         propiedad.departamento = fields.departamento
+        
     });
 
     form.on('fileBegin', function (name, file) {

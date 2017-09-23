@@ -14,7 +14,15 @@ var Propiedad = new mongoose.Schema(
         direccion: { type: String, required: [true, "Direccion de la propiedad es requerido"] },
         descripcion: { type: String, required: [true, "Descripcion de la propiedad es requerido"] },
         fechaDeRegistro: Date,
-        imagenes: { type: [] },
+        imagenes:{ type: [],
+            get: function (imagenes) {
+                if (Array.isArray(imagenes) && imagenes.length > 0) {
+                    imagenes[0].clase = 'active';
+                }
+                console.log(imagenes);
+                return imagenes;
+            } 
+        },
         departamento: String,
         ciudad: String,
         pais : String

@@ -6,6 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var hbs = require("hbs");
+var passport = require("passport");
+var session = require("express-session");
+var flash = require("connect-flash");
+var dotenv = require('dotenv').config()
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -14,9 +19,10 @@ var admin = require("./routes/admin");
 var garaje = require('./routes/garaje');
 var bano = require("./routes/bano");
 var tipoDePropiedad = require("./routes/tipoDePropiedad");
-var tipoDeInmueble = require("./routes/tipoDeInmueble")
-var agente = require("./routes/agente")
-var data = require("./routes/data")
+var tipoDeInmueble = require("./routes/tipoDeInmueble");
+var agente = require("./routes/agente");
+var data = require("./routes/data");
+var auth = require("./routes/auth");
 
 mongoose.connect("mongodb://localhost/Inmobiliaria");
 //var propiedadModel = require("./models/propiedad");
@@ -25,6 +31,15 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+//passport
+app.use(session({secret:"encrypt"}))
+require("./config/passport")(app);
+app.use(flash())
+app.use(function(req, res, next){
+  res.locals.user = req.user; 
+  next();
+});
 
 //helpers
 require("./helpers/saludoHelper")(hbs);
@@ -54,6 +69,7 @@ app.use('/tipoDePropiedad', tipoDePropiedad);
 app.use('/tipoDeInmueble', tipoDeInmueble);
 app.use('/agente', agente);
 app.use('/data', data);
+app.use('/auth', auth);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

@@ -96,12 +96,12 @@ border-bottom: none;
   text-align: center;
 }
 .galeria2{
-  background-color: darkgrey;
+  background-color: white;
   margin-left: 4px;
   margin-right: 4px;
 }
 .Subtitulo2{
-  background-color: darkgrey;
+  background-color: white;
   font-family: Arial;
   color: orangered;
   margin-left: 4px;
@@ -115,6 +115,7 @@ border-bottom: none;
 .icono{
   width: 100%;
   color:orangered;
+  position: absolute;
 }
 .icono2{
   padding-top: 100px;
@@ -145,7 +146,6 @@ border-bottom: none;
   font-size: 15px;
   text-align: center;
   width: 100%;
-  position: fixed;
   bottom: 0px;
 
 }
@@ -210,7 +210,8 @@ background-color: white;
   color: black;
 }
 .imagenGrande{
-  height: 417px;
+  height: 470px;
+  margin-left:50px; 
 }
 .imagenPequeña{
 }
@@ -247,6 +248,7 @@ background-color: white;
 .mi-slider{
   width: 350px;
   height: 300px;
+  margin-bottom: 10px;
 }
 .nav1{
   display: flex;
@@ -266,7 +268,7 @@ background-color: white;
   height: 40px;
   text-align: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .nav-item:hover{
   background-color: white;
@@ -302,6 +304,7 @@ color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding:8%;
 }
 .contenedor-formulario-crear-propiedad{
   background-color: grey;
@@ -311,7 +314,89 @@ color: white;
   justify-content: space-around;
 
 }
-.imagen-propiedad{
-  box-shadow: 10px 10px 5px orangered;
-  
+.color-de-fondo-mas-economicas{
+  background-color: #E0E0E0;
 }
+.carousel-control.left{
+  background: none;
+}
+.carousel-control.right{
+  background: none;
+}
+.fondo-de-informacion-gris{
+background-color:#E0E0E0;
+}
+.fondo-de-informacion-blanco{
+  background-color:white;
+  }
+
+  .single-item {
+    margin: 0 auto;
+    width: 20%;
+    color: #333;
+    background: white;
+    display: block;
+  }
+  
+  .slick-slide {
+    text-align: center;
+    color: #419be0;
+    background: white;
+  }
+  .slick-prev:after {
+    color: red;
+    font-size: 30px;
+  }
+  
+  .slick-next:before {
+    color: red;
+    font-size: 30px;
+  }
+  .slick-next:after {
+    color: red;
+    font-size: 30px;
+  }
+  
+  .slick-prev:before {
+    color: red;
+    font-size: 30px;
+  }
+  .descripcion-propiedad{
+    text-align: center;
+    padding-top: 20px;
+  }
+  .contactar-agente{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding-top: 20px;
+
+  }
+  .contactar-agente > input{
+      border-radius: 5px;
+      border: 1px orangered solid;
+  }
+  .fondo-contactar-agente{
+    height: 300px;
+    background-color: #E0E0E0;
+
+  }
+  /*header*/
+  .logo{
+    position: relative;
+    height: 100px;
+  }
+  .icono-log-out{
+    color: red;
+    font-size:30px;
+  }
+  .contenedor-log-out{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    z-index:1;
+  }
+/*end header*/
+
+
