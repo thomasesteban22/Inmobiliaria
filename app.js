@@ -45,7 +45,7 @@ app.use(function(req, res, next){
 require("./helpers/saludoHelper")(hbs);
 require("./helpers/mostrarEstadoHelper")(hbs);
 require("./helpers/mostrarEstrellasHelper")(hbs);
-
+require("./helpers/listarDatoAnterior")(hbs);
 //partials
 hbs.registerPartials(__dirname +"/views/partials", function(data){
 

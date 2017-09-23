@@ -399,4 +399,11 @@ background-color:#E0E0E0;
   }
 /*end header*/
 
+.nav-actualizar{
+  background-color: orangered;
+  font-weight: bold;
+  border: solid 3px white;
+  text-align: center;
+  
+}
 
