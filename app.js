@@ -23,6 +23,7 @@ var tipoDeInmueble = require("./routes/tipoDeInmueble");
 var agente = require("./routes/agente");
 var data = require("./routes/data");
 var auth = require("./routes/auth");
+var demos = require("./routes/demos");
 
 mongoose.connect("mongodb://localhost/Inmobiliaria");
 //var propiedadModel = require("./models/propiedad");
@@ -70,6 +71,7 @@ app.use('/tipoDeInmueble', tipoDeInmueble);
 app.use('/agente', agente);
 app.use('/data', data);
 app.use('/auth', auth);
+app.use('/demos', demos);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

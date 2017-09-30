@@ -1,0 +1,119 @@
+<style>
+    .otroColor{
+        color: greenyellow;
+    }
+    .agrandarLetras{
+        font-size: 100px;
+    }
+    .achiquitarLetras{
+        font-size: 12px;
+    }
+</style>
+<h1>HOLA DESDE DEMOS</h1>
+<div id="app">
+    \{{mensaje}}
+    \{{mensaje2}}
+</div>
+
+<div id="app2">
+    <span v-bind:class="clase">
+        \{{mensaje2}}
+    </span>
+    <span v-bind:title="mensaje">
+        Haga Hover con el maus
+
+    </span>
+
+</div>
+
+<div id="app3">
+    <span v-if="mostrar">
+        SI es true
+    </span>
+
+</div>
+
+
+<div id="app4">
+    <span v-for= "todo in todos">
+        \{{todo.text}}
+    </span>
+    <span v-for= "all in numeros1">
+        \{{all.numeros}}
+    </span>
+    <span v-for= "vocal1 in vocales">
+        \{{vocal1.vocal}}
+    </span>
+</div>
+
+
+
+<div id="app5">
+<p>\{{mensaje}}</p>
+<p>\{{numeros}}</p>
+<button v-on:click="reverseMessage"> Revertir el mensaje</button>
+<button v-on:click="alerta">Mostrar alerta</button>
+<span v-bind:class="otroColor" v-on:mouseleave="cambiarColor2" v-on:mouseover="cambiarColor">HOOOOOOLAAAAA</span>
+</div>
+
+
+<div id="app6">
+<p v-bind:class="claseAgrandarLetras" v-on:mouseleave="achiquitarLetra" v-on:mouseover="agrandarLetra">\{{texto}}</p>
+</div>
+
+<div id="app7">
+<p>\{{mensaje}}</p>
+<input v-model="mensaje" type="text">
+</div>
+
+<div id="app8">
+<ol>
+    <todo-item
+    v-for = "item in groceryList"
+    v-bind:todo="item"
+    v-bind:minombre="'Thomas'"
+    v-bind:key="item.id">    
+    </todo-item>
+
+</ol>
+</div>
+
+
+<div id="app9">
+    <label >\{{nombre}}</label>
+<input v-model="nombre" type="text">
+ <label v-once>\{{nombre}}</label>
+ <img v-bind:src="path" alt="asd">
+
+<div class="checkbox">
+    <label>
+        <input v-model="check" type="checkbox" value="">
+        \{{check ? "YES" :  "NO"}}
+    </label>
+</div>
+</div>
+
+
+<div id="app10">
+    <p>Has una pregunta de si o no</p>
+    <input type="text" v-model="pregunta">
+    <p>\{{respuesta}}</p>
+    <img v-bind:src="image">
+</div>
+
+
+
+
+
+
+
+<script src="/javascripts/app/demos/index.js"></script>
+
+
+
+
+
+
+
+
+
